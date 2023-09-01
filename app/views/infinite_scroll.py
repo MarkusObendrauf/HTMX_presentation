@@ -10,7 +10,7 @@ def infinite_scroll_demo(request: WSGIRequest) -> HttpResponse:
     contacts = _get_contacts(page=0)
     return render(
         request,
-        "infinite_scroll/infinite_scroll_demo.html",
+        "infinite_scroll/demo.html",
         {"contacts": contacts, "next_page": 1},
     )
 
@@ -20,7 +20,7 @@ def contacts(request: WSGIRequest) -> HttpResponse:
     contacts = _get_contacts(page=page)
     return render(
         request,
-        "infinite_scroll/infinite_scroll_rows.html",
+        "infinite_scroll/rows.html",
         {"contacts": contacts, "next_page": page + 1},
     )
 

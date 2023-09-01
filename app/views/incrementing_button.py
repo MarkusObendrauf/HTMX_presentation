@@ -6,7 +6,7 @@ from django.shortcuts import render
 def incrementing_button_demo(request: WSGIRequest) -> HttpResponse:
     return render(
         request,
-        "incrementing_button/incrementing_button_demo.html",
+        "incrementing_button/demo.html",
         {"value": 0, "next_value": 1},
     )
 
@@ -16,6 +16,6 @@ def incrementing_button(request: WSGIRequest) -> HttpResponse:
 
     return render(
         request,
-        "incrementing_button/incrementing_button.html",
+        "incrementing_button/button.html",
         {"value": value, "next_value": value + 1},
     )

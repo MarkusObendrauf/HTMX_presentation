@@ -47,7 +47,7 @@ def contacts(request: WSGIRequest) -> HttpResponse:
     contacts = _get_contacts(page=page)
     return render(
         request,
-        "edit/rows.html",
+        "edit/row_page.html",
         {"contacts": contacts, "next_page": page + 1},
     )
 
