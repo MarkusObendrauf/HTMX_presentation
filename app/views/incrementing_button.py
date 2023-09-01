@@ -3,19 +3,19 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def button(request: WSGIRequest) -> HttpResponse:
+def incrementing_button_demo(request: WSGIRequest) -> HttpResponse:
     return render(
         request,
-        "incrementing_button_demo.html",
+        "incrementing_button/incrementing_button_demo.html",
         {"value": 0, "next_value": 1},
     )
 
 
-def increment_button(request: WSGIRequest) -> HttpResponse:
+def incrementing_button(request: WSGIRequest) -> HttpResponse:
     value = int(request.GET.get("value"))
 
     return render(
         request,
-        "incrementing_button.html",
+        "incrementing_button/incrementing_button.htmx",
         {"value": value, "next_value": value + 1},
     )
