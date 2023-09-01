@@ -1,0 +1,8 @@
+{% for contact in contacts %}
+    {% include "edit/row.html" %}
+{% endfor %}
+<tr
+hx-get="contacts/?page={{ next_page }}"
+hx-trigger="revealed"
+hx-swap="afterend"
+/>

@@ -1,0 +1,22 @@
+<tr>
+    <td>{{ contact.id }}</td>
+    <td>{{ contact.first_name }}</td>
+    <td>{{ contact.last_name }}</td>
+    <td>{{ contact.email }}</td>
+    <td>
+        <button
+        class="btn btn-info"
+        hx-get="/contact/{{ contact.id }}/edit/"
+        hx-target="closest tr"
+        hx-swap="outerHTML"
+        >Edit</button>
+    </td>
+    <td>
+        <button
+        class="btn btn-danger"
+        hx-delete="/contact/{{ contact.id }}/"
+        hx-target="closest tbody"
+        hx-confirm="Are you sure?"
+        >Delete</button>
+    </td>
+</tr>

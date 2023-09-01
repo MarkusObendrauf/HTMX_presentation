@@ -1,5 +1,5 @@
 from typing import Iterable
-from django.core.handlers.wsgi import WSGIRequest
+from django.core.handlers.wsgi import WSGIRequest, QueryDict
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -10,17 +10,44 @@ def edit_demo(request: WSGIRequest) -> HttpResponse:
     contacts = _get_contacts(page=0)
     return render(
         request,
-        "infinite_scroll/infinite_scroll_demo.html",
+        "edit/demo.html",
         {"contacts": contacts, "next_page": 1},
     )
 
 
+def edit_contact(request: WSGIRequest, contact_id: int) -> HttpResponse:
+    contact = models.Contact2.objects.get(id=contact_id)
+    return render(
+        request,
+        "edit/edit_row.html",
+        {"contact": contact},
+    )
+
+
+def contact(request: WSGIRequest, contact_id: int) -> HttpResponse:
+    contact = models.Contact2.objects.get(id=contact_id)
+    if request.method == "DELETE":
+        contact.delete()
+        return contacts(request)
+    elif request.method == "PUT":
+        put = QueryDict(request.body)
+        contact.first_name = put.get("first_name")
+        contact.last_name = put.get("last_name")
+        contact.email = put.get("email")
+        contact.save()
+    return render(
+        request,
+        "edit/row.html",
+        {"contact": contact},
+    )
+
+
 def contacts(request: WSGIRequest) -> HttpResponse:
-    page = int(request.GET.get("page"))
+    page = int(request.GET.get("page") or 0)
     contacts = _get_contacts(page=page)
     return render(
         request,
-        "infinite_scroll/infinite_scroll_rows.html",
+        "edit/rows.html",
         {"contacts": contacts, "next_page": page + 1},
     )
 

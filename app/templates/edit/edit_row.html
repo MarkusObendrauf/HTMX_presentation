@@ -1,0 +1,23 @@
+<tr>
+    <td>{{ contact.id }}</td>
+    <td><input name="first_name" value="{{ contact.first_name }}" /></td>
+    <td><input name="last_name" value="{{ contact.last_name }}" /></td>
+    <td><input name="email" value="{{ contact.email }}" /></td>
+    <td>
+        <button
+        class="btn btn-success"
+        hx-put="/contact/{{ contact.id }}/"
+        hx-target="closest tr"
+        hx-include="closest tr"
+        hx-swap="outerHTML"
+        >Confirm</button>
+    </td>
+    <td>
+        <button
+        class="btn btn-danger"
+        hx-get="/contact/{{ contact.id }}/"
+        hx-target="closest tr"
+        hx-swap="outerHTML"
+        >Cancel</button>
+    </td>
+</tr>
