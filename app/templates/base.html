@@ -11,11 +11,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- HTMX -->
     <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+<style>
+    table {
+        font-size: 16px;
+      }
+</style>
 </head>
 <body>
-    <div class="container mt-4">
+    <div class="container mt-4" padding="10%">
         {% block content %}
         {% endblock %}
+        {% comment %} TODO proper footer for infinite scroll {% endcomment %}
+        Footer
     </div>
     <script>
     document.body.addEventListener('htmx:configRequest', (event) => {

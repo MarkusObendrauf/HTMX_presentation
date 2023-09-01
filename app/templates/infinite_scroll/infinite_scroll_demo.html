@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+    </tr>
+    {% include "infinite_scroll/infinite_scroll_rows.html" with value="0" next_value="1" %}
+</table>
+
+{% endblock content %}
+
