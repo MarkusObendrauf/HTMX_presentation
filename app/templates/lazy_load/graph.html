@@ -1,0 +1,12 @@
+{% load static %}
+
+<img alt="Tokyo Climate" src="{% static 'img/tokyo.png' %}">
+
+<style>
+    .htmx-settling img {
+      opacity: 0;
+    }
+    img {
+     transition: opacity 300ms ease-in;
+    }
+</style>

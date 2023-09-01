@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div
+    hx-get="/lazy-load-graph/"
+    hx-trigger="load"
+>
+    <img
+        alt="Result loading..."
+        class="htmx-indicator"
+        width="150"
+        src="{% static '/img/bars.svg' %}"
+    />
+</div>
+
+{% endblock content %}

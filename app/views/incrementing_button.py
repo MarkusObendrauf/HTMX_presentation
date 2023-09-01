@@ -16,6 +16,6 @@ def incrementing_button(request: WSGIRequest) -> HttpResponse:
 
     return render(
         request,
-        "incrementing_button/incrementing_button.htmx",
+        "incrementing_button/incrementing_button.html",
         {"value": value, "next_value": value + 1},
     )
