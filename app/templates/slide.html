@@ -5,7 +5,7 @@
 {% endblock slide_content%}
 
 <button
-class="btn"
+class="btn bg-light"
 id="previous-button"
 hx-swap-oob="true"
 hx-get="/slide/{{previous_slide_number}}?previous=true"
@@ -16,7 +16,7 @@ hx-target="#slide-contents"
 </button>
 
 <button
-class="btn"
+class="btn bg-light"
 id="next-button"
 hx-swap-oob="true"
 hx-get="/slide/{{next_slide_number}}"
