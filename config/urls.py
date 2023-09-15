@@ -5,6 +5,7 @@ from app.views.infinite_scroll import infinite_scroll_demo, contacts
 from app.views.lazy_load import lazy_load_demo, lazy_load_graph
 from app.views.incrementing_button import incrementing_button, incrementing_button_demo
 from app.views.slide import slide
+from app.views.transition import transition, transition_demo
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -19,4 +20,6 @@ urlpatterns = [
     path("contact/<int:contact_id>/", contact, name="contact"),
     path("contact/<int:contact_id>/edit/", edit_contact, name="contact"),
     path("slide/", slide, name="slide"),
+    path("transition-demo/", transition_demo, name="transition-demo"),
+    path("transition/", transition, name="slide"),
 ]
