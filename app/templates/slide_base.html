@@ -56,27 +56,13 @@
 
 <nav class="navbar navbar-light bg-light">
     <div class="col-md">
-        <button
-        class="btn bg-light"
-        id="previous-button"
-        hx-get="/slide_contents/{{slide_number|add:"-1"}}?previous=true"
-        hx-swap="innerHTML transition:true"
-        hx-target="#slide-contents">
-            Previous slide
-        </button>
+      {% include "previous_slide_button.html" %}
     </div>
     <div class="col-md text-center">
         <h1 class="navbar-nav">HTMX &lt/&gt</h1>
     </div>
     <div class="col-md text-right">
-        <button
-        class="btn bg-light"
-        id="next-button"
-        hx-get="/slide_contents/{{slide_number|add:"1"}}"
-        hx-swap="innerHTML transition:true"
-        hx-target="#slide-contents">
-            Next slide
-        </button>
+      {% include "next_slide_button.html" %}
     </div>
 </nav>
 

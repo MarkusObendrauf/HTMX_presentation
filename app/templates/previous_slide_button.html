@@ -1,0 +1,11 @@
+<button
+class="btn bg-light"
+id="previous-button"
+hx-swap-oob="true"
+hx-get="/slide_contents/{{slide_number|add:"-1"}}?previous=true"
+hx-swap="outerHTML transition:true"
+hx-target="#slide-contents"
+hx-push-url="/slide/{{slide_number|add:"-1"}}"
+>
+  Previous slide
+</button>

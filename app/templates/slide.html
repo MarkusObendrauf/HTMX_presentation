@@ -5,27 +5,8 @@
 {% endblock slide_content%}
 </div>
 
-<button
-class="btn bg-light"
-id="previous-button"
-hx-swap-oob="true"
-hx-get="/slide_contents/{{slide_number|add:"-1"}}?previous=true"
-hx-swap="outerHTML transition:true"
-hx-target="#slide-contents"
-hx-push-url="/slide/{{slide_number|add:"-1"}}"
->
-  Previous slide
-</button>
+<!-- perform oob swaps on buttons -->
+{% include "previous_slide_button.html" %}
+{% include "next_slide_button.html" %}
 
-<button
-class="btn bg-light"
-id="next-button"
-hx-swap-oob="true"
-hx-get="/slide_contents/{{slide_number|add:"1"}}"
-hx-swap="outerHTML transition:true"
-hx-target="#slide-contents"
-hx-push-url="/slide/{{slide_number|add:"1"}}"
->
-  Next slide
-</button>
 {% endblock content%}
