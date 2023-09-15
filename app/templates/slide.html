@@ -1,15 +1,16 @@
-{% extends 'base.html' %}
 
 {% block content %}
+<div id=slide-contents class="{{ transition_class }}">
 {% block slide_content %}
 {% endblock slide_content%}
+</div>
 
 <button
 class="btn bg-light"
 id="previous-button"
 hx-swap-oob="true"
 hx-get="/slide/{{previous_slide_number}}?previous=true"
-hx-swap="innerHTML transition:true"
+hx-swap="outerHTML transition:true"
 hx-target="#slide-contents"
 >
   Previous slide
@@ -20,7 +21,7 @@ class="btn bg-light"
 id="next-button"
 hx-swap-oob="true"
 hx-get="/slide/{{next_slide_number}}"
-hx-swap="innerHTML transition:true"
+hx-swap="outerHTML transition:true"
 hx-target="#slide-contents"
 >
   Next slide
