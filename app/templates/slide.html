@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  .slide.htmx-swapping {
+    opacity: 0;
+    transform: translateX(30%);
+    transition-property: transform, opacity;
+    transition-duration: 0.2s, 0.2s;
+  }
+  .slide.htmx-settling {
+    transition-property: transform, opacity;
+    transition-duration: 0.2s, 0.2s; */
+  }
+</style>
+
+<div class="slide" id="slide">
+   <h1>Slide 1</h1>
+   <button
+   hx-get="/incrementing-button/?value=0"
+   hx-swap="innerHTML swap:0.2s settle:0.2s"
+   hx-target="closest div">
+     Swap!
+   </button>
+</div>
+
+{% endblock content %}
