@@ -38,7 +38,6 @@ def slide(request: WSGIRequest, slide_number: int = 0) -> HttpResponse:
     slide = slides[slide_number]
     previous_slide_number = slide_number - 1
     next_slide_number = slide_number + 1
-    print(transition_class.value)
     return render(
         request,
         slide,
