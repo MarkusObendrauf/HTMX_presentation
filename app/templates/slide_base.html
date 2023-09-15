@@ -59,7 +59,7 @@
         <button
         class="btn bg-light"
         id="previous-button"
-        hx-get="/slide/{{previous_slide_number}}?previous=true"
+        hx-get="/slide_contents/{{slide_number|add:"-1"}}?previous=true"
         hx-swap="innerHTML transition:true"
         hx-target="#slide-contents">
             Previous slide
@@ -72,7 +72,7 @@
         <button
         class="btn bg-light"
         id="next-button"
-        hx-get="/slide/{{next_slide_number}}"
+        hx-get="/slide_contents/{{slide_number|add:"1"}}"
         hx-swap="innerHTML transition:true"
         hx-target="#slide-contents">
             Next slide
@@ -80,8 +80,12 @@
     </div>
 </nav>
 
-<div id=slide-contents class="{{ transition_class }} container mt-4 mb-4 text-center">
-    {% include "slide_1.html" %}
+<div id=slide-contents
+class="{{ transition_class }} container mt-4 mb-4 text-center"
+hx-get="/slide_contents/{{slide_number}}"
+hx-swap="innerHTML transition:true"
+hx-trigger="load"
+>
 </div>
 
 {% endblock content %}

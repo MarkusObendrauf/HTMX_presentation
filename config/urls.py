@@ -20,7 +20,8 @@ urlpatterns = [
     path("contact/<int:contact_id>/", contact, name="contact"),
     path("contact/<int:contact_id>/edit/", edit_contact, name="contact"),
     path("slide/", slide_base, name="slide"),
-    path("slide/<int:slide_number>", slide, name="slide"),
+    path("slide/<int:slide_number>", slide_base, name="slide"),
+    path("slide_contents/<int:slide_number>", slide, name="slide"),
     path("transition-demo/", transition_demo, name="transition-demo"),
     path("transition/", transition, name="slide"),
 ]
