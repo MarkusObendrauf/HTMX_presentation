@@ -1,7 +1,7 @@
 
-{% extends 'base.html' %}
+{% extends 'slide.html' %}
 
-{% block content %}
+{% block slide_content %}
 
 <table class="table table-striped">
     <thead>
@@ -13,9 +13,9 @@
         </tr>
     <thead>
     <tbody>
-        {% include "infinite_scroll/rows.html" with value="0" next_value="1" %}
+        {% include "infinite_scroll/rows.html" with next_page="0" %}
     <tbody>
 </table>
 
-{% endblock content %}
+{% endblock slide_content %}
 

@@ -1,86 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% block slide_content %}
+{% endblock slide_content%}
 
-<style>
-  @keyframes fade-in {
-    from { opacity: 0; }
-  }
-
-  @keyframes fade-out {
-    to { opacity: 0; }
-  }
-
-  @keyframes slide-from-right {
-    from { transform: translateX(90px); }
-  }
-
-  @keyframes slide-to-left {
-    /* to { transform: translateX(-90px); } */
-  }
-
-  @keyframes slide-to-right {
-    /* to { transform: translateX(90px); } */
-  }
-
-  @keyframes slide-from-left {
-    from { transform: translateX(-90px); }
-  }
-
-  ::view-transition-old(slide-right) {
-    animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-    600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  ::view-transition-new(slide-right) {
-    animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
-  }
-
-  ::view-transition-old(slide-left) {
-    animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-    600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  ::view-transition-new(slide-left) {
-    animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-left;
-  }
-
-.next-slide {
-    view-transition-name: slide-right;
-}
-
-.previous-slide {
-    view-transition-name: slide-left;
-}
-</style>
-
-<div>
 <button
 class="btn"
 id="previous-button"
-hx-get="/incrementing-button-demo"
+hx-swap-oob="true"
+hx-get="/slide/{{previous_slide_number}}?previous=true"
 hx-swap="innerHTML transition:true"
-hx-target="#slide-contents">
+hx-target="#slide-contents"
+>
   Previous slide
 </button>
+
 <button
 class="btn"
 id="next-button"
-hx-get="/incrementing-button-demo"
+hx-swap-oob="true"
+hx-get="/slide/{{next_slide_number}}"
 hx-swap="innerHTML transition:true"
-hx-target="#slide-contents">
+hx-target="#slide-contents"
+>
   Next slide
 </button>
-</div>
-
-<div id=slide-contents class={{ transition_class }}>
-  <h1>Slide 1</h1>
-  <button
-  hx-get="/incrementing-button-demo"
-  hx-swap="innerHTML transition:true"
-  hx-target="closest div">
-    Swap!
-  </button>
-</div>
-
-{% endblock content %}
+{% endblock content%}

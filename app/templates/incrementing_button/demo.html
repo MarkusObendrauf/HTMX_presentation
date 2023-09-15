@@ -1,16 +1,8 @@
 
-{% extends 'base.html' %}
+{% extends 'slide.html' %}
 
-{% block content %}
+{% block slide_content %}
 
 {% include "incrementing_button/button.html" with value="0" next_value="1" %}
-<button
-id="previous-button"
-hx-swap-oob="true"
-hx-get="/incrementing-button-demo"
-hx-target="#slide-contents"
->
-  OOB button swap
-</button>
 
-{% endblock content %}
+{% endblock %}
