@@ -1,7 +1,6 @@
 <button
     class="btn btn-lg btn-primary"
-    hx-get="/incrementing-button/?value={{ next_value }}"
-    hx-target="this"
+    hx-get="/incrementing-button/?value={{ value|add:"1" }}"
     hx-swap="outerHTML"
     >
     {{ value }}

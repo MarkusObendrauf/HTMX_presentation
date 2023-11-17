@@ -1,0 +1,28 @@
+{% extends 'slide.html' %}
+
+{% block slide_content %}
+
+<div class="container text-left">
+
+<h1>Let's recap</h1>
+
+<ul>
+    <li>No Backend -> json/graphql -> javascript -> html</li>
+    <li>No Hidden state</li>
+    <ul>
+        <li>Easy to understand, easy to debug</li>
+    </ul>
+    <li>All application state transitions are defined by hypermedia</li>
+    <ul>
+        <li>AKA: Hypermedia as the Engine of Application State (HATEOAS)</li>
+    </ul>
+    <li>Frontend and Backend are decoupled</li>
+    <ul>
+        <li>Frontend does not know what a Contact is</li>
+    </ul>
+    <li>This is Rest!</li>
+</ul>
+
+</div>
+
+{% endblock slide_content %}

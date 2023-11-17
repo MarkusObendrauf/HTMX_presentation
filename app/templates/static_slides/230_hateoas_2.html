@@ -1,0 +1,51 @@
+{% extends 'slide.html' %}
+
+{% block slide_content %}
+{% load static %}
+
+<div class="container text-left">
+
+<h1>HATEOAS</h1>
+
+<code><pre>
+&lt;html>
+     &lt;body>
+        &lt;div>Account Number: 12345&lt;/div>
+        &lt;div>Balance: -$50.00 USD&lt;/div>
+        &lt;div>Links:
+            &lt;a href="/accounts/12345/deposits&lt;/a>
+        &lt;/div>
+     &lt;/body>
+&lt;/html>
+</pre></code>
+
+<div>
+
+<code><pre>
+{
+    "account": {
+        "number": 12345,
+        "balance": {
+            "currency": "usd",
+            "balance": -50
+        },
+        "status": "overdrawn"
+    }
+}
+</pre></code>
+
+<br>
+
+<ul>
+<li>In the json API, the client must understand how the backend operates</li>
+<ul>
+
+<li>What interactions are possible?</li>
+<li>What does overdrawn mean?</li>
+
+</ul>
+<li>Frontend and backend are coupled</li>
+<li>Verification logic is dupicated</li>
+<li>The API must be versioned</li></div>
+
+{% endblock slide_content %}

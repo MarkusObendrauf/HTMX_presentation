@@ -1,0 +1,20 @@
+{% extends 'slide.html' %}
+
+{% block slide_content %}
+
+<div class="container text-left">
+
+<h1>Get, Swap, Target</h1>
+
+<ul>
+    <li>hx-get will issue a GET to the specified URL<br>
+    <code>hx-get="/example"</code></li>
+    <li>hx-target allows you to target an element for swapping<br>
+    <code>hx-target="closest div"</code></li>
+    <li>hx-swap allows you specify how the response will be swapped relative to the target<br>
+    <code>hx-swap="afterend"</code></li>
+</ul>
+
+</div>
+
+{% endblock slide_content %}
