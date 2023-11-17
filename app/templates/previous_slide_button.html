@@ -1,6 +1,9 @@
 <button
 class="btn bg-light"
 id="previous-button"
+{% if slide_number == 0 %}
+disabled="true"
+{% endif %}
 hx-swap-oob="true"
 hx-get="/slide_contents/{{slide_number|add:"-1"}}?previous=true"
 hx-swap="outerHTML transition:true"

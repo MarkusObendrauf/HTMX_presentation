@@ -21,7 +21,11 @@ def slide_base(request: WSGIRequest, slide_number: int = 0) -> HttpResponse:
 
 
 slides = [
-    "slide_1.html",
+    "static_slides/10_back_in_time.html",
+    "static_slides/20_interactivity.html",
+    "static_slides/30_react.html",
+    "static_slides/40_elephant.html",
+    "static_slides/50_react_2.html",
     "incrementing_button/demo.html",
     "lazy_load/lazy_load_demo.html",
     "infinite_scroll/demo.html",

@@ -7,12 +7,16 @@
     <script src="https://unpkg.com/htmx.org@1.9.0"></script>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+<style>
+li{
+  margin: 20px 0;
+}
+</style>
 <body
 hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
 >
-    <!-- <div class="container mt-4 mb-4"> -->
         {% block content %}
         {% endblock %}
-    <!-- </div> -->
+    </div>
 </body>
 </html>
