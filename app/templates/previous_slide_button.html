@@ -1,6 +1,7 @@
 <button
 class="btn bg-light"
 id="previous-button"
+hx-trigger="click, keyup[key=='PageUp'] from:body"
 {% if slide_number == 0 %}
 disabled="true"
 {% endif %}

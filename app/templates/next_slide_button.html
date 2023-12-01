@@ -1,6 +1,7 @@
 <button
 class="btn bg-light"
 id="next-button"
+hx-trigger="click, keyup[key=='PageDown'] from:body"
 hx-swap-oob="true"
 hx-get="/slide_contents/{{slide_number|add:"1"}}"
 hx-swap="outerHTML transition:true"
