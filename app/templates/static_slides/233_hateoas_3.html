@@ -11,12 +11,9 @@
 &lt;html>
      &lt;body>
         &lt;div>Account Number: 12345&lt;/div>
-        &lt;div>Balance: $100.00 USD&lt;/div>
+        &lt;div>Balance: -$50.00 USD&lt;/div>
         &lt;div>Links:
-            &lt;a href="/accounts/12345/deposits">deposits&lt;/a>
-            &lt;a href="/accounts/12345/withdrawals">withdrawals&lt;/a>
-            &lt;a href="/accounts/12345/transfers">transfers&lt;/a>
-            &lt;a href="/accounts/12345/close-requests">close-requests&lt;/a>
+            &lt;a href="/accounts/12345/deposits"&lt;/a>
         &lt;/div>
      &lt;/body>
 &lt;/html>
@@ -30,11 +27,25 @@
         "number": 12345,
         "balance": {
             "currency": "usd",
-            "balance": 100
+            "balance": -50
         },
-        "status": "positiveBalance"
+        "status": "overdrawn"
     }
 }
 </pre></code>
+
+<br>
+
+<ul>
+<li>In the json API, the client must understand how the backend operates</li>
+<ul>
+
+<li>What interactions are possible?</li>
+<li>What does overdrawn mean?</li>
+
+</ul>
+<li>Frontend and backend are coupled</li>
+<li>Verification logic is dupicated</li>
+<li>API is slow-moving and versioned</li></div>
 
 {% endblock slide_content %}
