@@ -1,34 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>HTMX Demo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://unpkg.com/htmx.org@1.9.0"></script>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
-<style>
-li{
-  margin: 20px 0;
-}
-ul {
-  font-size: 30px;
-}
-h1 {
-  font-size: 64px;
-}
-p {
-  font-size: 30px;
-}
-code {
-  font-size: 24px;
-}
-</style>
-<body
-hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
->
-        {% block content %}
-        {% endblock %}
-    </div>
+
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+  {% block content %}
+  {% endblock %}
+  
+  <script src="https://unpkg.com/htmx.org@1.9.0"></script>
 </body>
+
 </html>
