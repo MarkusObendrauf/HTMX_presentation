@@ -5,6 +5,7 @@ from app.views.infinite_scroll import infinite_scroll_demo, contacts
 from app.views.lazy_load import lazy_load_demo, lazy_load_graph
 from app.views.incrementing_button import incrementing_button, incrementing_button_demo
 from app.views.slide import slide, slide_base
+from app.views.tabs import tab, tabs_demo
 from app.views.transition import transition, transition_demo
 
 urlpatterns = [
@@ -24,4 +25,6 @@ urlpatterns = [
     path("slide_contents/<int:slide_number>", slide, name="slide"),
     path("transition-demo/", transition_demo, name="transition-demo"),
     path("transition/", transition, name="slide"),
+    path("tabs-demo/", tabs_demo, name="tab-demo"),
+    path("tab/", tab, name="tab"),
 ]

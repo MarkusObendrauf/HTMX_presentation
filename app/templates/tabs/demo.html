@@ -1,0 +1,29 @@
+{% extends 'slide.html' %}
+{% load static %}
+
+{% block slide_content %}
+
+<div class="container text-left">
+
+<h1>Get, Target</h1>
+
+<br>
+<code>&lt;button hx-get="/tab?tab=2" hx-target="#tab-div">Tab 2&lt;/button></code>
+<br>
+<ul>
+  <li>When a user clicks...</li>
+  <li>on the <b>button</b>...</li>
+  <li>send a <b>Get</b> to "/tab?tab=2"...</li>
+  <li><b>and replace <code>#tab-div</code></b> with its response.</li>
+</ul>
+
+<br>
+<br>
+
+<div id="tab-div">
+{% include 'tabs/tab.html' with tab="1" %}
+</div>
+
+</div>
+
+{% endblock slide_content %}

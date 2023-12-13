@@ -10,11 +10,21 @@ h1 {
 p {
   font-size: 30px;
 }
+small {
+  font-size: 24px;
+}
 code {
   font-size: 24px;
 }
 container-sm {
     max-width: 540px;
+}
+
+notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 @keyframes fade-in {
