@@ -1,3 +1,22 @@
+li{
+  margin: 20px 0;
+}
+ul {
+  font-size: 30px;
+}
+h1 {
+  font-size: 64px;
+}
+p {
+  font-size: 30px;
+}
+code {
+  font-size: 24px;
+}
+container-sm {
+    max-width: 540px;
+}
+
 @keyframes fade-in {
     from { opacity: 0; }
 }
