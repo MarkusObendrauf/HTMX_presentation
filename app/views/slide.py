@@ -54,6 +54,7 @@ slides = [
     "static_slides/320_contexte_DX.html",
     "static_slides/330_contexte_UX.html",
     "static_slides/400_conclusion.html",
+    "static_slides/410_questions.html",
 ]
 
 
