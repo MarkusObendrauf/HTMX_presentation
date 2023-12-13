@@ -1,9 +1,9 @@
 # Requirements
-Django
-SQLite3
+* Django
+* SQLite3
 
 # Set up database
-`python manage.py makemigrations`
+`python manage.py makemigrations`  
 `python manage.py migrate`
 
 # Run
