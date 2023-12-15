@@ -61,6 +61,7 @@ slides = [
     "static_slides/320_contexte_DX.html",
     "static_slides/330_contexte_UX.html",
     "static_slides/350_more_examples.html",
+    "static_slides/360_when_to_use.html",
     "static_slides/400_conclusion.html",
     "static_slides/405_further_reading.html",
     "static_slides/410_questions.html",
