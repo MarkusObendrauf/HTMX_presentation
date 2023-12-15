@@ -12,9 +12,9 @@ def tabs_demo(request: WSGIRequest) -> HttpResponse:
 
 
 def tab(request: WSGIRequest) -> HttpResponse:
-    tab = request.GET.get("tab") or "1"
+    tab_id = request.GET.get("tab") or "1"
     return render(
         request,
         "tabs/tab.html",
-        {"tab": tab}
+        {"tab": tab_id}
     )

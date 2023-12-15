@@ -13,7 +13,7 @@ def lazy_load_demo(request: WSGIRequest) -> HttpResponse:
 
 
 def lazy_load_graph(request: WSGIRequest) -> HttpResponse:
-    sleep(3)
+    sleep(49439)
     return render(
         request,
         "lazy_load/graph.html",
