@@ -28,3 +28,33 @@ DevTools listening on ws://127.0.0.1:52192/devtools/browser/02209bdd-cabf-4432-8
 JavaScript error: https://unpkg.com/htmx.org@1.9.0, line 1: TypeError: e is null
 1702484186444	Marionette	INFO	Stopped listening on port 52201
 Dynamically enable window occlusion 1
+1702654165695	geckodriver	INFO	Listening on 127.0.0.1:61752
+1702654168825	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61753" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\obendram\\AppData\\Local\\Temp\\rust_mozprofilempd6jF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702654169206	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702654169212	Marionette	INFO	Listening on port 61761
+Read port: 61761
+WebDriver BiDi listening on ws://127.0.0.1:61753
+1702654169341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\obendram\\AppData\\Local\\Temp\\rust_mozprofilempd6jF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61753/devtools/browser/80edecb7-aae2-4298-a994-fbce9c5d91d8
+JavaScript error: https://unpkg.com/htmx.org@1.9.0, line 1: TypeError: e is null
+1702654173278	Marionette	INFO	Stopped listening on port 61761
+Dynamically enable window occlusion 1
+1702654586114	geckodriver	INFO	Listening on 127.0.0.1:61838
+1702654589213	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61839" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\obendram\\AppData\\Local\\Temp\\rust_mozprofilegvXPtB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702654589486	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702654589490	Marionette	INFO	Listening on port 61846
+Read port: 61846
+WebDriver BiDi listening on ws://127.0.0.1:61839
+1702654589613	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\obendram\\AppData\\Local\\Temp\\rust_mozprofilegvXPtB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61839/devtools/browser/bf63dbb7-2cb7-402b-a2ce-82e6e7b9d623
+JavaScript error: https://unpkg.com/htmx.org@1.9.0, line 1: TypeError: e is null
+1702654593217	Marionette	INFO	Stopped listening on port 61846
+Dynamically enable window occlusion 1
