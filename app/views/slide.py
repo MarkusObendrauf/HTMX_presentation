@@ -54,6 +54,7 @@ slides = [
     "static_slides/220_hateoas.html",
     "static_slides/230_hateoas_2.html",
     "static_slides/233_hateoas_3.html",
+    "static_slides/240_javascript.html",
     "static_slides/310_migration.html",
     "static_slides/315_contexte_1.html",
     "static_slides/318_contexte_problems.html",
