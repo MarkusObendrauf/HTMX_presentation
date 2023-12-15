@@ -1,0 +1,34 @@
+
+{% extends 'slide.html' %}
+{% load static %}
+
+{% block slide_content %}
+
+<style>
+    .htmx-settling li {
+      opacity: 0;
+    }
+    li {
+     transition: opacity 200ms ease-in;
+    }
+</style>
+
+<img src="{% static '/img/comparison.png' %}" width="1000">
+
+<br>
+<br>
+
+<button class="btn btn-lg btn-primary" hx-get="/click_to_load/list" hx-swap="beforeend" hx-target="#list">
+    Click Me
+    <img class="htmx-indicator" src="{% static '/img/spinner_white.svg' %}"
+ />
+</button>
+
+<div class="container text-left">
+
+<ul id="list"></ul>
+
+</div>
+
+{% endblock slide_content %}
+

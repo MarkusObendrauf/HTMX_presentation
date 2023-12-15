@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from app.views.click_to_load import click_to_load_demo, click_to_load_list
 from app.views.edit import contact, edit_demo, edit_contact, contacts as contacts_edit
 from app.views.infinite_scroll import infinite_scroll_demo, contacts
 from app.views.lazy_load import lazy_load_demo, lazy_load_graph
@@ -27,4 +28,6 @@ urlpatterns = [
     path("transition/", transition, name="slide"),
     path("tabs-demo/", tabs_demo, name="tab-demo"),
     path("tab/", tab, name="tab"),
+    path("click_to_load/", click_to_load_demo, name="click_to_load"),
+    path("click_to_load/list", click_to_load_list, name="list"),
 ]
